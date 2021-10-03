@@ -11,18 +11,4 @@ class GildedRose {
     public GildedRose(Item[] items) {
         this.items = Arrays.asList(items);
     }
-
-    private Consumer<Item> consumer = new Consumer<Item>() {
-
-        private Item item;
-
-        @Override
-        public void accept(Item item) {
-            this.item.process();
-        }
-    };
-
-    public void updateQuality() {
-        this.items.stream().forEach(consumer);
-    }
 }
